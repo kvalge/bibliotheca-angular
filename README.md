@@ -3,11 +3,15 @@
 Library application which allows to manage users, books and lending data.  
 Front-end application to https://github.com/kvalge/bibliotheca.git.  
 Used IDE: IntelliJ 2022.3.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.  
+  
 
-## VCS
+## Project set up  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.  
 For version control is used GitHub.  
 IntelliJ IDEA task integration with GitHub is used to create task log.
+Integrated Bootstrap v3.4.1.  
+
+
 
 ## Development server
 
