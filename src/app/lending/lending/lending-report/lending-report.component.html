@@ -1,0 +1,31 @@
+<section>
+<h5>Tähtaja ületanud laenutusted</h5>
+  <div>
+    <div>
+      <button (click)="getOverdueLendings()">Laenutused</button>
+    </div>
+    <div *ngIf="showHeader; else getTableMessage">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th *ngFor="let column of headers">
+            {{column}}
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let lending of lendings; let i = index">
+          <th>{{i + 1}}</th>
+          <td>{{lending.libraryUserFirstName}}</td>
+          <td>{{lending.libraryUserLastName}}</td>
+          <td>{{lending.bookName}}</td>
+          <td>{{lending.daysOverdue}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #getTableMessage>
+      <p>Kliki kõigi üle tähtaja laenutuste nägemiseks</p>
+    </ng-template>
+  </div>
+</section>
