@@ -11,3 +11,13 @@ body {
   width: 960px;
   background-color: ghostwhite;
 }
+
+section{
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 1px;
+  border: lightgray solid 1px;
+  padding: 1rem;
+  font-size: 16px;
+  background-color: whitesmoke;
+}
