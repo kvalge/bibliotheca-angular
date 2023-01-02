@@ -2,9 +2,9 @@
   <h5>Kõigi lugejate andmebaas</h5>
   <div>
     <div>
-      <button (click)="getAllLibraryUsers()">Lugejad</button>
+      <button (click)="getAllLibraryUsers()">Kõik lugejad</button>
     </div>
-    <div *ngIf="showHeader; else getTableMessage">
+    <div *ngIf="showHeader">
       <table class="table table-hover">
         <thead>
         <tr>
@@ -23,9 +23,6 @@
         </tbody>
       </table>
     </div>
-    <ng-template #getTableMessage>
-      <p>Kliki kõigi lugejate nägemiseks</p>
-    </ng-template>
   </div>
 </section>
 

@@ -1,0 +1,41 @@
+h5 {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input-base {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input {
+  width: 15%;
+  margin-left: 10px;
+}
+
+button {
+  margin: 2rem 0rem 1rem 41rem;
+}
+
+.btnRight {
+  float: right;
+}
+
+table {
+  width: 70%;
+  margin-left: 170px;
+  margin-top: 30px;
+}
+
+table tr td, table tr th {
+  font-size: 13px;
+  border-bottom: 1px solid #ddd;
+}
+
+p {
+  margin-left: 27rem;
+  font-size: 13px;
+  font-weight: bold;
+}

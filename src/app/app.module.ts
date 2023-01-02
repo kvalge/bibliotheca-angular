@@ -17,6 +17,7 @@ import {LendingService} from "./shared/lending.service";
 import {LibraryUserListComponent} from './library-user/library-user-list/library-user-list.component';
 import {LibraryUserComponent} from './library-user/library-user.component';
 import {LibraryUserService} from "./shared/library-user.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {LibraryUserService} from "./shared/library-user.service";
     RouterOutlet,
     RouterLinkActive,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [DataStorageService, BookService, LendingService, LibraryUserService],
   bootstrap: [AppComponent]

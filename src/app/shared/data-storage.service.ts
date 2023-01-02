@@ -48,4 +48,14 @@ export class DataStorageService {
         this.libraryUserService.setLibraryUsers(libraryUsers);
       })
   }
+
+  getLibUser(libUserCode: string) {
+    this.http.get<LibraryUserModel>('http://localhost:8080/libraryuser/idcode?idCode=' + libUserCode)
+      .pipe(map((libUser) => {
+        return libUser;
+      }))
+      .subscribe(libUser => {
+        this.libraryUserService.setLibUser(libUser)
+      })
+  }
 }
