@@ -6,11 +6,17 @@ import {BookService} from "./book.service";
 import {BookModel} from "../books/book.model";
 import {LendingService} from "./lending.service";
 import {LendingReportModel} from "../lending/lending/lending-report/lending-report.model";
+import {LibraryUserModel} from "../library-user/library-user.model";
+import {LibraryUserService} from "./library-user.service";
 
 @Injectable({providedIn: 'root'})
 export class DataStorageService {
 
-  constructor(private http: HttpClient, private bookService: BookService, private lendingService: LendingService) {
+  constructor(
+    private http: HttpClient,
+    private bookService: BookService,
+    private lendingService: LendingService,
+    private libraryUserService: LibraryUserService) {
   }
 
   getAllBooks() {
@@ -30,6 +36,16 @@ export class DataStorageService {
       }))
       .subscribe(lendings => {
         this.lendingService.setOverdueLendings(lendings);
+      })
+  }
+
+  getLibraryUsers() {
+    this.http.get<LibraryUserModel[]>('http://localhost:8080/libraryuser/all')
+      .pipe(map((libraryUsers) => {
+        return libraryUsers;
+      }))
+      .subscribe(libraryUsers => {
+        this.libraryUserService.setLibraryUsers(libraryUsers);
       })
   }
 }

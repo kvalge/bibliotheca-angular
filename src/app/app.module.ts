@@ -14,6 +14,9 @@ import {BookService} from "./shared/book.service";
 import {LendingComponent} from './lending/lending/lending.component';
 import {LendingReportComponent} from "./lending/lending/lending-report/lending-report.component";
 import {LendingService} from "./shared/lending.service";
+import {LibraryUserListComponent} from './library-user/library-user-list/library-user-list.component';
+import {LibraryUserComponent} from './library-user/library-user.component';
+import {LibraryUserService} from "./shared/library-user.service";
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import {LendingService} from "./shared/lending.service";
     HeaderComponent,
     FooterComponent,
     LendingComponent,
-    LendingReportComponent
+    LendingReportComponent,
+    LibraryUserListComponent,
+    LibraryUserComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,7 @@ import {LendingService} from "./shared/lending.service";
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DataStorageService, BookService, LendingService],
+  providers: [DataStorageService, BookService, LendingService, LibraryUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
