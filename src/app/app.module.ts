@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {RouterLinkActive, RouterOutlet} from "@angular/router";
-
-import { AppComponent } from './app.component';
-import { BooksComponent } from './books/books/books.component';
-import { BookListComponent } from './books/books/book-list/book-list.component';
-import { HeaderComponent } from './layout/header/header.component';
 import {AppRoutingModule} from "./app-routing.module";
-import { FooterComponent } from './layout/footer/footer.component';
+import {HttpClientModule} from "@angular/common/http";
+
+import {AppComponent} from './app.component';
+import {BooksComponent} from './books/books/books.component';
+import {BookListComponent} from './books/books/book-list/book-list.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {DataStorageService} from "./shared/data-storage.service";
+import {BookService} from "./shared/book.service";
 
 @NgModule({
   declarations: [
@@ -21,9 +24,11 @@ import { FooterComponent } from './layout/footer/footer.component';
     BrowserModule,
     RouterOutlet,
     RouterLinkActive,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataStorageService, BookService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
