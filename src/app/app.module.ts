@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {RouterLinkActive, RouterOutlet} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books/books.component';
 import { BookListComponent } from './books/books/book-list/book-list.component';
+import { HeaderComponent } from './layout/header/header.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
-    BookListComponent
+    BookListComponent,
+    HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterOutlet,
+    RouterLinkActive,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
