@@ -1,15 +1,25 @@
 # BIBLIOTHECA
 
-Library application which allows to manage users, books and lending data.  
+Library application which aim is to manage users, books and lending data.  
 Front-end application to https://github.com/kvalge/bibliotheca.git.  
 Used IDE: IntelliJ 2022.3.
-  
 
 ## Project set up  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.  
 For version control is used GitHub.  
-IntelliJ IDEA task integration with GitHub is used to create task log.
+IntelliJ IDEA task integration with GitHub is used to create task log.  
 Integrated Bootstrap v3.4.1.  
+
+## Structure and done functionalities
+layout: for header and footer.  
+books: for 'Raamatud' page. Enables to return all books from database (book-list component), find 
+book by name and move to edit book data (book-item component), add new and edit book (book-edit component).  
+lending: for 'Laenutus' page. Returns lending list with overdue deadlines (lending-report component).  
+library-user: for 'Lugejad' page. Returns all library users (library-user-list component), finds library
+user by id code/library card nr (library-user component).  
+login and register: for 'Logi sisse' ja 'Registreeru' pages. Without working functionalities yet.  
+
+
 
 
 
