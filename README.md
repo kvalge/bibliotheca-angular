@@ -18,8 +18,7 @@ lending: for 'Laenutus' page. Returns lending list with overdue deadlines (lendi
 library-user: for 'Lugejad' page. Returns all library users (library-user-list component), finds library
 user by id code/library card nr (library-user component).  
 login and register: for 'Logi sisse' ja 'Registreeru' pages. Without working functionalities yet.  
-
-
+shared: for service files.
 
 
 
