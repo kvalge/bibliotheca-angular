@@ -20,9 +20,10 @@ export class LibraryUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getLibraryUser(libUserName: string) {
+  getLibraryUser(libUserCode: string) {
     this.showHeader = true;
-    this.dataStorageService.getLibUser(libUserName);
+    this.dataStorageService.getLibUser(libUserCode);
     this.libUser = this.libraryUserService.getLibUser();
+    this.libUserCode = '';
   }
 }
