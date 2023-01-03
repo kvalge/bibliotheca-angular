@@ -16,6 +16,7 @@
           <th>Eksemplaride arv</th>
           <th>Laenutusperiood (nädal)</th>
           <th>Asukoht</th>
+          <th>Uuenda</th>
         </tr>
         <tr>
           <td>{{book.name}}</td>
@@ -23,8 +24,13 @@
           <td>{{book.copyQuantity}}</td>
           <td>{{book.loanPeriod}}</td>
           <td>{{book.location}}</td>
+          <td>
+            <button class="btn-small" (click)="bookEdit.setNewValues(book)">Uuenda</button>
+            </td>
         </tr>
       </table>
     </div>
   </div>
 </section>
+
+<app-book-edit #bookEdit ></app-book-edit>

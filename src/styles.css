@@ -41,9 +41,8 @@ button:active {
   border-color: #621839;
 }
 
-.button-sm{
+.btn-small{
   font-size: 11px;
   width: 60px;
   height: 30px;
-  border-radius: 5px;
 }

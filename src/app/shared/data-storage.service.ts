@@ -82,4 +82,9 @@ export class DataStorageService {
         this.bookService.addBook(book);
       });
   }
+
+  editBook(request: BookModel) {
+    this.http.put('http://localhost:8080/book/update', request)
+      .subscribe();
+  }
 }

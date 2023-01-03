@@ -23,6 +23,10 @@ button {
   margin-left: 20px;
 }
 
+.btn-small {
+  margin-left: 5px;
+}
+
 table {
   width: 70%;
   margin-left: 170px;
@@ -33,6 +37,7 @@ table tr td, table tr th {
   font-size: 13px;
   border-bottom: 1px solid #ddd;
   text-align: center;
+  height: 40px;
 }
 
 p {

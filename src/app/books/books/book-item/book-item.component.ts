@@ -23,7 +23,7 @@ export class BookItemComponent implements OnInit {
   getBook(bookName: string) {
     this.showHeader = true;
     this.dataStorageService.findBookByName(bookName);
-    this.book =  this.bookService.getBook();
+    this.book = this.bookService.getBook();
     this.bookName = '';
   }
 }

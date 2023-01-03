@@ -26,5 +26,4 @@ export class BookListComponent implements OnInit {
     this.dataStorageService.getAllBooks();
     this.books = this.bookService.getBooks();
   }
-
 }

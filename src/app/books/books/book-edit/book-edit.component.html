@@ -1,7 +1,7 @@
 <section>
   <div class="input-base">
     <h5>Täida vorm andmetega uue raamatu lisamiseks</h5>
-    <div>
+    <div id="top">
       <form [formGroup]="bookForm" (ngSubmit)="submitBook()">
         <div>
           <label for="name">Pealkiri</label>
@@ -17,7 +17,7 @@
         </div>
         <div>
           <label for="loanPeriod">Laenutusperiood (nädalate arv)</label>
-          <input type="number" id="loanPeriod" formControlName="loanPeriod">
+          <input type="number" id="loanPeriod" formControlName="loanPeriod" required>
         </div>
         <div>
           <label for="location">Asukoht</label>
@@ -27,7 +27,7 @@
          Palun sisesta vajalikud andmed!
        </span>
         <div>
-          <button type="submit" [disabled]="!bookForm.valid">Lisa raamat</button>
+          <button type="submit" [disabled]="!bookForm.valid">{{!editMode ? 'Lisa raamat' : 'Muuda'}}</button>
           <button type="button" (click)="onCancel()">Tühista</button>
         </div>
       </form>
