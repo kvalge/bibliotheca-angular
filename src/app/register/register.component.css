@@ -1,0 +1,31 @@
+h5 {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h6 {
+  margin-bottom: 70px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input-base {
+  margin-top: 30px;
+  text-align: center;
+}
+
+label {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+input {
+  width: 30%;
+}
+
+button {
+  margin-top: 30px;
+}

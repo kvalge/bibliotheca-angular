@@ -21,6 +21,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LibraryUserEditComponent } from './library-user/library-user-edit/library-user-edit.component';
 import { BookItemComponent } from './books/books/book-item/book-item.component';
 import { BookEditComponent } from './books/books/book-edit/book-edit.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { BookEditComponent } from './books/books/book-edit/book-edit.component';
     LibraryUserEditComponent,
     BookItemComponent,
     BookEditComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
     imports: [
         BrowserModule,
