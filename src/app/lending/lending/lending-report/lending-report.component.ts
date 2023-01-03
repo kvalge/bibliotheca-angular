@@ -23,7 +23,7 @@ export class LendingReportComponent implements OnInit {
 
   getOverdueLendings() {
     this.showHeader = true;
-    this.dataStorageService.getOverdueLendings();
+    this.dataStorageService.getOverdueLending();
     this.lendings = this.lendingService.getOverdueLendings();
   }
 }

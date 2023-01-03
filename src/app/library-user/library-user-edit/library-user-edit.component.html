@@ -1,0 +1,51 @@
+<section>
+  <div class="row">
+    <div class="box" style="width: 400px">
+      <h5>Lisa andmed uue lugejakonto loomiseks</h5>
+      <form [formGroup]="libUserForm" (ngSubmit)="submitLibUser()">
+        <div>
+          <label for="idCode">Lugejakaardi nr</label>
+          <input type="text" id="idCode" formControlName="idCode">
+        </div>
+        <div>
+          <label for="firstName">Eesnimi</label>
+          <input type="text" id="firstName" formControlName="firstName">
+        </div>
+        <div>
+          <label for="lastName">Perekonnanimi</label>
+          <input type="text" id="lastName" formControlName="lastName">
+        </div>
+        <div>
+          <button type="submit">Lisa</button>
+        </div>
+      </form>
+    </div>
+      <div class="box-img">
+        <div class="row">
+          <div class="box">
+            <img
+              alt="games"
+              src="assets/reading1.png" alt="reading"
+            />
+          </div>
+          <div class="box">
+            <img
+              src="assets/reading2.png" alt="reading"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="box">
+            <img
+              src="assets/reading3.png" alt="reading"
+            />
+          </div>
+          <div class="box">
+            <img
+              src="assets/reading4.png" alt="reading"
+            />
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

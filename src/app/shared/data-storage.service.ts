@@ -2,11 +2,11 @@ import {Injectable} from "@angular/core";
 import {map} from "rxjs/operators";
 import {HttpClient} from "@angular/common/http";
 
-import {BookService} from "./book.service";
 import {BookModel} from "../books/book.model";
-import {LendingService} from "./lending.service";
 import {LendingReportModel} from "../lending/lending/lending-report/lending-report.model";
 import {LibraryUserModel} from "../library-user/library-user.model";
+import {BookService} from "./book.service";
+import {LendingService} from "./lending.service";
 import {LibraryUserService} from "./library-user.service";
 
 @Injectable({providedIn: 'root'})
@@ -29,13 +29,13 @@ export class DataStorageService {
       })
   }
 
-  getOverdueLendings() {
+  getOverdueLending() {
     this.http.get<LendingReportModel[]>('http://localhost:8080/lending/overdue')
-      .pipe(map((lendings) => {
-        return lendings;
+      .pipe(map((lendingList) => {
+        return lendingList;
       }))
-      .subscribe(lendings => {
-        this.lendingService.setOverdueLendings(lendings);
+      .subscribe(lendingList => {
+        this.lendingService.setOverdueLending(lendingList);
       })
   }
 
@@ -56,6 +56,13 @@ export class DataStorageService {
       }))
       .subscribe(libUser => {
         this.libraryUserService.setLibUser(libUser)
+      })
+  }
+
+  addNewLibUser(libUser: LibraryUserModel) {
+    this.http.post('http://localhost:8080/libraryuser/new', libUser)
+      .subscribe((response) => {
+        this.libraryUserService.addNewLibUser(libUser);
       })
   }
 }

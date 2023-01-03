@@ -20,4 +20,10 @@ export class LibraryUserService {
   getLibUser() {
     return this.libUser;
   }
+
+  addNewLibUser(idCode: any) {
+    return this.libraryUsers.find((user) => {
+      return user.idCode === idCode;
+    })
+  }
 }

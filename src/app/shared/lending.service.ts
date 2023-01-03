@@ -4,7 +4,7 @@ export class LendingService {
 
   private lendingReport: LendingReportModel[] = [];
 
-  setOverdueLendings(lendings: LendingReportModel[]) {
+  setOverdueLending(lendings: LendingReportModel[]) {
     this.lendingReport = lendings;
   }
 
