@@ -75,4 +75,11 @@ export class DataStorageService {
         this.bookService.setBook(book);
       })
   }
+
+  addNewBook(book: BookModel) {
+    this.http.post('http://localhost:8080/book/new', book)
+      .subscribe((response) => {
+        this.bookService.addBook(book);
+      });
+  }
 }

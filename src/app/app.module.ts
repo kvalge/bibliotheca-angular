@@ -20,6 +20,7 @@ import {LibraryUserService} from "./shared/library-user.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LibraryUserEditComponent } from './library-user/library-user-edit/library-user-edit.component';
 import { BookItemComponent } from './books/books/book-item/book-item.component';
+import { BookEditComponent } from './books/books/book-edit/book-edit.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BookItemComponent } from './books/books/book-item/book-item.component';
     LibraryUserComponent,
     LibraryUserEditComponent,
     BookItemComponent,
+    BookEditComponent,
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,36 @@
+<section>
+  <div class="input-base">
+    <h5>Täida vorm andmetega uue raamatu lisamiseks</h5>
+    <div>
+      <form [formGroup]="bookForm" (ngSubmit)="submitBook()">
+        <div>
+          <label for="name">Pealkiri</label>
+          <input type="text" id="name" formControlName="name">
+        </div>
+        <div>
+          <label for="acquisitionDate">Kuupäev</label>
+          <input type="date" id="acquisitionDate" formControlName="acquisitionDate" required>
+        </div>
+        <div>
+          <label for="copyQuantity">Eksemplaride arv</label>
+          <input type="number" id="copyQuantity" formControlName="copyQuantity" required min="1">
+        </div>
+        <div>
+          <label for="loanPeriod">Laenutusperiood (nädalate arv)</label>
+          <input type="number" id="loanPeriod" formControlName="loanPeriod">
+        </div>
+        <div>
+          <label for="location">Asukoht</label>
+          <input type="text" id="location" formControlName="location" required>
+        </div>
+        <span class="alert" *ngIf="bookForm.invalid && bookForm.touched">
+         Palun sisesta vajalikud andmed!
+       </span>
+        <div>
+          <button type="submit" [disabled]="!bookForm.valid">Lisa raamat</button>
+          <button type="button" (click)="onCancel()">Tühista</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

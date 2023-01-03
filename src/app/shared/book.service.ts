@@ -21,6 +21,10 @@ export class BookService {
     return this.book;
   }
 
+  addBook(book: BookModel) {
+    this.books.push(book);
+  }
+
   findBookByName(bookName: any) {
     return this.books.find((b) => {
       return b.name === bookName;
