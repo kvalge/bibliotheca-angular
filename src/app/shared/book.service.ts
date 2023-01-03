@@ -3,6 +3,7 @@ import {BookModel} from "../books/book.model";
 export class BookService {
 
   private books: BookModel[] = [];
+  private book: BookModel = null;
 
   setBooks(books: BookModel[]) {
     this.books = books;
@@ -10,5 +11,19 @@ export class BookService {
 
   getBooks() {
     return this.books;
+  }
+
+  setBook(book: BookModel) {
+    this.book = book;
+  }
+
+  getBook() {
+    return this.book;
+  }
+
+  findBookByName(bookName: any) {
+    return this.books.find((b) => {
+      return b.name === bookName;
+    })
   }
 }

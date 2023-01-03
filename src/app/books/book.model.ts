@@ -7,7 +7,6 @@ export class BookModel {
   public loanPeriod: number;
   public location: string;
 
-
   constructor(id: number, name: string, acquisitionDate: Date, copyQuantity: number, loanPeriod: number, location: string) {
     this.id = id;
     this.name = name;

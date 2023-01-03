@@ -1,0 +1,30 @@
+<section>
+  <h5>Otsi raamatut pealkirja järgi</h5>
+  <div>
+    <div class="input-base">
+      <label for="bookName">Pealkiri</label>
+      <input type="text" id="bookName" name="bookName" [(ngModel)]="bookName">
+      <button (click)="getBook(bookName)">Otsi</button>
+    </div>
+  </div>
+    <div>
+      <div>
+        <table class="table table-hover" *ngIf="showHeader">
+          <tr>
+            <th>Pealkiri</th>
+            <th>Vastuvõtmise kuupäev</th>
+            <th>Eksemplaride arv</th>
+            <th>Laenutusperiood (nädal)</th>
+            <th>Asukoht</th>
+          </tr>
+          <tr>
+            <td>{{book.name}}</td>
+            <td>{{book.acquisitionDate}}</td>
+            <td>{{book.copyQuantity}}</td>
+            <td>{{book.loanPeriod}}</td>
+            <td>{{book.location}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+</section>

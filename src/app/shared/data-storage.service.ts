@@ -65,4 +65,14 @@ export class DataStorageService {
         this.libraryUserService.addNewLibUser(libUser);
       })
   }
+
+  findBookByName(bookName: string) {
+    this.http.get<BookModel>('http://localhost:8080/book/name?name=' + bookName)
+      .pipe(map((book) => {
+        return book;
+      }))
+      .subscribe(book => {
+        this.bookService.setBook(book);
+      })
+  }
 }
