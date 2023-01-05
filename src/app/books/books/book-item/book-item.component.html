@@ -16,7 +16,6 @@
           <th>Eksemplaride arv</th>
           <th>Laenutusperiood (nädal)</th>
           <th>Asukoht</th>
-          <th>Uuenda</th>
         </tr>
         <tr>
           <td>{{book.name}}</td>
@@ -27,6 +26,9 @@
           <td>
             <button class="btn-small" (click)="bookEdit.setNewValues(book)">Uuenda</button>
             </td>
+          <td>
+            <button class="btn-small" (click)="onClose()">Sulge</button>
+          </td>
         </tr>
       </table>
     </div>

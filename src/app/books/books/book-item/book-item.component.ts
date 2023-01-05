@@ -26,4 +26,8 @@ export class BookItemComponent implements OnInit {
     this.book = this.bookService.getBook();
     this.bookName = '';
   }
+
+  onClose(){
+    this.showHeader = false;
+  }
 }
