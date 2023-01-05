@@ -26,4 +26,7 @@ export class LibraryUserListComponent implements OnInit {
     this.libraryUser = this.libraryUserService.getLibraryUsers();
   }
 
+  onCloseList() {
+    this.showHeader = false;
+  }
 }

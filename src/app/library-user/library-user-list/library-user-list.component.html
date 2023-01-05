@@ -3,6 +3,7 @@
   <div>
     <div>
       <button (click)="getAllLibraryUsers()">Kõik lugejad</button>
+      <button class="btnRight" *ngIf="showHeader" (click)="onCloseList()">Sulge</button>
     </div>
     <div *ngIf="showHeader">
       <table class="table table-hover">
