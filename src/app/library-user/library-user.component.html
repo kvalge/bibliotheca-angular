@@ -8,22 +8,29 @@
       <input type="text" id="libUserCode" name="libUserCode" [(ngModel)]="libUserCode">
     </div>
     <button (click)="getLibraryUser(libUserCode)">Leia lugeja</button>
-  </div>
-  <div>
-    <div *ngIf="showHeader">
-      <div>
-        <table class="table table-hover">
-          <tr>
-            <th>Lugejakaardi nr</th>
-            <th>Eesnimi</th>
-            <th>Perekonnanimi</th>
-          </tr>
-          <tr>
-            <td>{{libUser.idCode}}</td>
-            <td>{{libUser.firstName}}</td>
-            <td>{{libUser.lastName}}</td>
-          </tr>
-        </table>
+    <div>
+      <div *ngIf="showHeader">
+        <div>
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th>Lugejakaardi nr</th>
+              <th>Eesnimi</th>
+              <th>Perekonnanimi</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>{{libUser.idCode}}</td>
+              <td>{{libUser.firstName}}</td>
+              <td>{{libUser.lastName}}</td>
+              <td>
+                <button class="btn-small" type="button" (click)="onClose()">Sulge</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

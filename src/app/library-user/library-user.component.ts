@@ -26,4 +26,8 @@ export class LibraryUserComponent implements OnInit {
     this.libUser = this.libraryUserService.getLibUser();
     this.libUserCode = '';
   }
+
+  onClose() {
+    this.showHeader = false;
+  }
 }
