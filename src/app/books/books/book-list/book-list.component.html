@@ -3,6 +3,7 @@
   <div>
     <div>
       <button (click)="getAllBooks()">Raamatud</button>
+      <button class="btnRight" *ngIf="showHeader" (click)="onCloseList()">Close</button>
     </div>
     <div *ngIf="showHeader; else getTableMessage">
       <table class="table table-hover">

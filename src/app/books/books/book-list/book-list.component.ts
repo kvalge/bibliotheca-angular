@@ -14,6 +14,7 @@ export class BookListComponent implements OnInit {
   books: BookModel[];
   headers = ['#', 'Pealkiri', 'Eksemplaride arv', 'Laenutusperiood (nädal)', 'Asukoht']
   showHeader: boolean = false;
+  onClose: boolean = false;
 
   constructor(private bookService: BookService, private dataStorageService: DataStorageService) {
   }
@@ -25,5 +26,9 @@ export class BookListComponent implements OnInit {
     this.showHeader = true;
     this.dataStorageService.getAllBooks();
     this.books = this.bookService.getBooks();
+  }
+
+  onCloseList() {
+    this.showHeader=false;
   }
 }
