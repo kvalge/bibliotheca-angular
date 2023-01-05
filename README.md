@@ -9,7 +9,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 For version control is used GitHub.  
 IntelliJ IDEA task integration with GitHub is used to create task log.  
 Integrated Bootstrap v3.4.1.  
-Some functionalities are working only with Moesif Origin & CORS Changer 0.4.7 extension added to Chrome.
 
 ## Structure and done functionalities
 layout: for header and footer.  
