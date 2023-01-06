@@ -1,13 +1,19 @@
 <section>
-  <div class="input-base">
-    <h5>Sisesta email ja salasõna lugejaks registreerimiseks</h5>
-    <div>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email">
-      <label for="password">Salasõna</label>
-      <input type="password" id="password" name="password">
+  <div class=row>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <form #authForm="ngForm" (ngSubmit)="onRegister(authForm)">
+        <h5>Sisesta email ja salasõna lugejaks registreerimiseks</h5>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" ngModel name="email" required email>
+        </div>
+        <div class="form-group">
+          <label for="password">Salasõna</label>
+          <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
+        </div>
+        <button type="submit" [disabled]="!authForm.valid">Registreeru</button>
+        <h6>Liigu sisselogimise lehele</h6>
+      </form>
     </div>
-    <button (click)="onRegister()">Registreeru</button>
-    <h6>Liigu sisselogimise lehele</h6>
   </div>
 </section>
