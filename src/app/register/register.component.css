@@ -17,9 +17,8 @@ h6 {
 
 label {
   font-size: 13px;
-  margin-right: 15px;
   display: inline-block;
-  text-align: right;
+  text-align: left;
   width: 100px;
 }
 
