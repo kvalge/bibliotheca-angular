@@ -6,14 +6,28 @@ h5 {
 }
 
 h6 {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   font-weight: bold;
+}
+
+.row {
+  margin-top: 30px;
+  text-align: center;
 }
 
 label {
   font-size: 13px;
+  margin-right: 15px;
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+}
+
+input{
+  font-size: 13px;
+  width: 300px;
 }
 
 button {
-  margin-top: 15px;
+  margin-top: 25px;
 }

@@ -18,11 +18,12 @@ import {LibraryUserListComponent} from './library-user/library-user-list/library
 import {LibraryUserComponent} from './library-user/library-user.component';
 import {LibraryUserService} from "./shared/library-user.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { LibraryUserEditComponent } from './library-user/library-user-edit/library-user-edit.component';
-import { BookItemComponent } from './books/books/book-item/book-item.component';
-import { BookEditComponent } from './books/books/book-edit/book-edit.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import {LibraryUserEditComponent} from './library-user/library-user-edit/library-user-edit.component';
+import {BookItemComponent} from './books/books/book-item/book-item.component';
+import {BookEditComponent} from './books/books/book-edit/book-edit.component';
+import {LoginComponent} from './login/login.component';
+import {RegisterComponent} from './register/register.component';
+import {AuthService} from "./shared/auth.service";
 
 @NgModule({
   declarations: [
@@ -41,16 +42,16 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     RegisterComponent,
   ],
-    imports: [
-        BrowserModule,
-        RouterOutlet,
-        RouterLinkActive,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule
-    ],
-  providers: [DataStorageService, BookService, LendingService, LibraryUserService],
+  imports: [
+    BrowserModule,
+    RouterOutlet,
+    RouterLinkActive,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [DataStorageService, BookService, LendingService, LibraryUserService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

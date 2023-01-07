@@ -5,12 +5,12 @@ export class UserModel {
   public id: number;
   public username: string;
   public password: string;
-  public role: RoleModel;
+  public roleName: string;
 
-  constructor(id: number, username: string, password: string, role: RoleModel) {
+  constructor(id: number, username: string, password: string, roleName: string) {
     this.id = id;
     this.username = username;
     this.password = password;
-    this.role = role;
+    this.roleName = roleName;
   }
 }
