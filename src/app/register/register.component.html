@@ -10,10 +10,6 @@
           <label for="password">Salasõna</label>
           <input type="password" id="password" placeholder="vähemalt 6 tähemärki pikk" formControlName="password" minlength="6">
         </div>
-        <div class="form-group">
-          <label for="roleName">Kontroll</label>
-          <input type="text" id="roleName" placeholder="Sisesta kontrollsõna 'lugeja'" formControlName="roleName">
-        </div>
         <button type="submit" [disabled]="!userForm.valid">Registreeru</button>
         <h6>Liigu sisselogimise lehele</h6>
       </form>

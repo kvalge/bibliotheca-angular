@@ -3,7 +3,6 @@ import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 import {AuthService} from "../shared/auth.service";
-import {UserModel} from "../user/user.model";
 
 @Component({
   selector: 'app-register',
@@ -21,7 +20,6 @@ export class RegisterComponent implements OnInit {
     this.userForm = new FormGroup({
       username: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required),
-      roleName: new FormControl(null, Validators.required),
     });
   }
 
