@@ -1,6 +1,6 @@
 <section>
   <div class="input-base">
-    <h5>Täida vorm andmetega uue raamatu lisamiseks</h5>
+    <h5 *ngIf="!editMode">Täida vorm andmetega uue raamatu lisamiseks</h5>
     <div id="top">
       <form [formGroup]="bookForm" (ngSubmit)="submitBook()">
         <div>
