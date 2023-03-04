@@ -9,6 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 For version control is used GitHub.  
 IntelliJ IDEA task integration with GitHub is used to create task log.  
 Integrated Bootstrap v3.4.1.  
+Created docker files to containerize project.
 
 ## Structure and done functionalities
 layout: for header and footer.  

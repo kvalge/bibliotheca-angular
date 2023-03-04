@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  bibliotheca-angular:
+    image: "bibliotheca-angular"
+    build: .
+    ports:
+      - "4200:80"
+    volumes:
+      - "./bibliotheca-angular:/usr/src/app"
+      - "node_modules:/usr/src/app/node_modules"
+volumes:
+  node_modules:
